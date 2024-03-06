@@ -76,11 +76,11 @@ class GitHubToConfluence:
 
 # Example Usage
         
-github_token = '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'
+github_token = ''
 confluence_server_url = 'https://confluence.minyma.io'
 confluence_space = 'Documentation (Markdown) Files'
 confluence_page_title = 'Documentation (Markdown) Files'
-confluence_api_token = 'MDk4MTQzODUxMzU1Ok2yHbDeb9HkDA8p6qmvXdO4TLLe'
+confluence_api_token = ''
 
 github_to_confluence = GitHubToConfluence(github_token, confluence_server_url, confluence_space, confluence_page_title, confluence_api_token)
 
