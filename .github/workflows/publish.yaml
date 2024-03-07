@@ -1,0 +1,33 @@
+name: Publishing MD Files 
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  publishing:
+    runs-on: ubuntu-latest
+
+    inputs:
+      confluence_host:
+        description: 'Confluence API URL'
+        required: true
+      title:
+        description: 'Title of your page'
+        required: true
+      token:
+        description: 'Confluence token'
+        required: true
+      space:
+        description: 'Space of your page'
+        required: true
+        
+    steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v2
+
+        - name: Install the library
+          run: python3 -m pip install md2cf
+
+    
+        - name: Publish Docs
+          run: md2cf --host '${{ inputs.confluence_host }}' --title "${{ inputs.title }}"  --token '${{ inputs.token }}' --space ${{ inputs.space }} documentation/*
