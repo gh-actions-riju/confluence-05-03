@@ -1,3 +1,6 @@
+---
+title: This is a title
+---
 # Markdown: Syntax
 
 *   [Overview](#overview)
