@@ -29,6 +29,6 @@ jobs:
 
     
         - name: Publish Docs
-          # run: md2cf --host '${{ inputs.confluence_host }}' --title "${{ inputs.title }}"  --token '${{ inputs.token }}' --space ${{ inputs.space }} documentation/*
-            run: md2cf --host '${{ inputs.confluence_host }}' --token '${{ inputs.token }}' --space ${{ inputs.space }} documentation
+          # run: md2cf --host '${{ inputs.confluence_host }}' --title "${{ inputs.title }}"  --token '${{ inputs.token }}' --space ${{ inputs.space }} documentation
+          run: md2cf --host '${{ inputs.confluence_host }}' --token '${{ inputs.token }}' --space ${{ inputs.space }} documentation
           
