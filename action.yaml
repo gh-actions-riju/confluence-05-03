@@ -32,7 +32,9 @@ runs:
     run: |
       python3 -m venv .venv
       source .venv/bin/activate
-      python3 -m pip install md2cf
+  -
+    name: Install Library
+    run: python3 -m pip install md2cf
   
   -
     name: Publish Docs
