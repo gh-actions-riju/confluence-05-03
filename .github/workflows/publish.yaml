@@ -9,6 +9,9 @@ on:
       space:
         description: 'Space of your page'
         required: true
+      doc-space:
+        description: location of the documentation folders
+        required: true
         
 
 jobs:
@@ -27,5 +30,5 @@ jobs:
           env:
             CONFLUENCE_API_TOKEN: ${{ secrets.CONFLUENCE_API_TOKEN }}
           # run: md2cf --host '${{ inputs.confluence_host }}' --title "${{ inputs.title }}"  --token '${{ inputs.token }}' --space ${{ inputs.space }} documentation
-          run: md2cf --host 'https://confluence.minyma.io/rest/api' --token '${{ secrets.CONFLUENCE_API_TOKEN }}' --space ${{ inputs.space }} documentation
+          run: md2cf --host 'https://confluence.minyma.io/rest/api' --token '${{ secrets.CONFLUENCE_API_TOKEN }}' --space ${{ inputs.space }} ${{ inputs.doc-space }
           
