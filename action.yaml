@@ -4,6 +4,13 @@ inputs:
   space:
     description: 'Space of your page'
     required: true
+  CONFLUENCE_API_TOKEN:
+    description: Your Confluence API Token
+    required: true
+  doc-space:
+    description: The Confluence space
+    required: true
+    
 
 runs:
   using: composite
