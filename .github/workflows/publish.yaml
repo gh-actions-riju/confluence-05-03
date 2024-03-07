@@ -2,11 +2,6 @@ name: Publishing MD Files
 
 on:
   workflow_dispatch: 
-
-jobs:
-  publishing:
-    runs-on: ubuntu-latest
-
     inputs:
       confluence_host:
         description: 'Confluence API URL'
@@ -20,6 +15,10 @@ jobs:
       space:
         description: 'Space of your page'
         required: true
+
+jobs:
+  publishing:
+    runs-on: ubuntu-latest
         
     steps:
         - name: Checkout Repository
