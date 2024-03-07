@@ -77,7 +77,7 @@ class GitHubToConfluence:
 # Example Usage
         
 github_token = ''
-confluence_server_url = 'https://confluence.minyma.io'
+confluence_server_url = 'https://confluence.xxxx.io'
 confluence_space = 'Documentation (Markdown) Files'
 confluence_page_title = 'Documentation (Markdown) Files'
 confluence_api_token = ''
