@@ -34,6 +34,7 @@ runs:
       source .venv/bin/activate
   -
     name: Install Library
+    shell: bash
     run: python3 -m pip install md2cf
   
   -
