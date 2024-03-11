@@ -1,13 +1,13 @@
 name: Publish MD Files
 description: Publishes MD files from GitHub to Confluence
 inputs:
-  space:
+  CONF_SPACE:
     description: 'Space of your page'
     required: true
-  CONFLUENCE_API_TOKEN:
-    description: Your Confluence API Token
-    required: true
-  doc-space:
+  MD2CF_PARAMS:
+    description: Extra parameters
+    required: false
+  DOC_SPACE:
     description: The Confluence space
     required: true
     
@@ -40,5 +40,5 @@ runs:
   -
     name: Publish Docs
     shell: bash
-    run: md2cf --host 'https://confluence.minyma.io/rest/api' --token '${{ inputs.CONFLUENCE_API_TOKEN }}' --space ${{ inputs.space }} ${{ inputs.doc-space }}
+    run: md2cf --host 'https://confluence.minyma.io/rest/api' --token '${{ inputs.CONFLUENCE_API_TOKEN }}' --space ${{ inputs.CONF_SPACE }} ${{ inputs.MD2CF_PARAMS }} ${{ inputs.DOC_SPACE }}
 
