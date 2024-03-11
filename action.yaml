@@ -10,6 +10,9 @@ inputs:
   DOC_SPACE:
     description: The Confluence space
     required: true
+  CONFLUENCE_API_TOKEN:
+    description: The Confluence token
+    required: true
     
 
 runs:
